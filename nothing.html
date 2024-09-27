@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+            background-image: url('https://www.transparenttextures.com/patterns/white-paper.png');
+            color: #333;
+            scroll-behavior: smooth;
+        }
+        header {
+            background: linear-gradient(135deg, #ff6b6b, #ff9f40, #1dd1a1);
+            background-size: 300% 300%;
+            animation: gradient-animation 8s ease infinite;
+            color: white;
+            padding: 200px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+        @keyframes gradient-animation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        header h1 {
+            margin: 0;
+            font-size: 5em;
+            font-weight: 600;
+            letter-spacing: 2px;
+            animation: slide-in 1s ease forwards;
+        }
+        header h2 {
+            margin: 5px 0;
+            font-weight: 300;
+            font-size: 1.8em;
+            animation: fade-in 1s ease forwards;
+        }
+        @keyframes slide-in {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes fade-in {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        nav {
+            margin-top: 20px;
+        }
+        nav a {
+            margin: 0 20px;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s, transform 0.3s;
+        }
+        nav a:hover {
+            color: #ffeaa7;
+            transform: scale(1.1);
+        }
+        section {
+            padding: 60px 30px;
+            margin: 20px auto;
+            color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 2px solid #ff9f40; /* Border color for sections */
+        }
+        section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+        }
+        #about {
+            background: linear-gradient(135deg, #a29bfe, #74b9ff);
+        }
+        #projects {
+            background: linear-gradient(135deg, #ff6b6b, #feca57);
+        }
+        #contact {
+            background: linear-gradient(135deg, #1dd1a1, #00cec9);
+        }
+        #skills {
+            background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+            background-size: 300% 300%;
+            animation: gradient-animation 8s ease infinite; /* Adding gradient animation */
+            padding: 20px; /* Extra padding for the skills section */
+            border-radius: 15px; /* Round corners for skills section */
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #2c3e50;
+            color: #ecf0f1;
+        }
+        button {
+            background: #ff6b6b;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s, transform 0.3s;
+        }
+        button:hover {
+            background: #ff9f40;
+            animation: bounce 0.3s ease;
+        }
+        @keyframes bounce {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        .skills {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .skill {
+            text-align: center;
+            margin: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 2px solid #ff9f40; /* Border for skill boxes */
+            border-radius: 10px; /* Rounded corners for skill boxes */
+            padding: 10px; /* Padding inside skill boxes */
+            width: 150px; /* Set a fixed width for consistency */
+        }
+        .skill:nth-child(1) {
+            background-color: #ffccbc; /* Light Orange */
+        }
+        .skill:nth-child(2) {
+            background-color: #b2ebf2; /* Light Blue */
+        }
+        .skill:nth-child(3) {
+            background-color: #ffe0b2; /* Light Yellow */
+        }
+        .skill:nth-child(4) {
+            background-color: #c8e6c9; /* Light Green */
+        }
+        .skill:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .skill img {
+            width: 80px;
+            height: 80px;
+            background-color: #ff9f40; /* Background color for skill icons */
+            border-radius: 50%; /* Circular background for icons */
+            padding: 10px; /* Space between icon and background */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome</h1>
+    <h2>to My Story</h2>
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>Hello! I'm Bristin cb, a web developer with a passion for creating beautiful and functional websites.</p>
+</section>
+
+<section id="projects">
+    <h2>My Projects</h2>
+    <ul>
+        <li><strong>Project 1:</strong> A dynamic website built with HTML, CSS, and JavaScript.</li>
+        <li><strong>Project 2:</strong> A web application using React.js for seamless user experience.</li>
+        <li><strong>Project 3:</strong> An e-commerce site developed with Node.js and Express.</li>
+    </ul>
+</section>
+
+<section id="skills">
+    <h2>My Skills</h2>
+    <div class="skills">
+        <div class="skill">
+            <img src="https://img.icons8.com/ios-filled/100/ffffff/html-5.png" alt="HTML5"/>
+            <h4>HTML</h4>
+            <p>HTML V.5</p>
+        </div>
+        <div class="skill">
+            <img src="https://img.icons8.com/ios-filled/100/ffffff/css3.png" alt="CSS3"/>
+            <h4>CSS</h4>
+            <p>CSS3</p>
+        </div>
+        <div class="skill">
+            <img src="https://img.icons8.com/ios-filled/100/ffffff/javascript.png" alt="JavaScript"/>
+            <h4>JavaScript</h4>
+            <p>JavaScript</p>
+        </div>
+        <div class="skill">
+            <img src="https://img.icons8.com/ios-filled/100/ffffff/react-native.png" alt="React"/>
+            <h4>React</h4>
+            <p> React </p>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        
+        <button type="submit">Send</button>
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2024 My Portfolio</p>
+</footer>
+
+</body>
+</html>
